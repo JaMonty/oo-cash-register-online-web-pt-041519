@@ -17,7 +17,15 @@ def add_item(title, price, quantity = 1)
 end
 
 
-
+def apply_discount
+    if @discount != 0
+      pc_discount = 1 - @discount/100.0 
+      @total = @total*pc_discount    
+      return "After the discount, the total comes to $#{@total.to_i}."
+    else
+      return "There is no discount to apply."
+    end 
+  end
 # def apply_discount
 #         if @discount
 #             "After the discount, the total comes to $#{@total -= (@total * (@discount/100.0)).to_i}."
