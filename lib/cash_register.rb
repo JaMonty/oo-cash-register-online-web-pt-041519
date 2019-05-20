@@ -27,7 +27,10 @@ def apply_discount
     end 
   end
 
-def
+def void_last_transaction
+    self.last_transaction = 0.0
+    self.total = self.last_transaction
+end
 
 
 
